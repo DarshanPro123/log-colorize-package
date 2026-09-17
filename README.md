@@ -1,4 +1,4 @@
-# log-colorize
+# @darshanpro123/log-colorize
 
 <p align="center">
   <img src="./docs/banner.png" alt="log-colorize banner" width="100%" />
@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/log-colorize"><img src="https://img.shields.io/npm/v/log-colorize.svg" alt="npm version" /></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/log-colorize.svg" alt="license" /></a>
+  <a href="https://www.npmjs.com/package/@darshanpro123/log-colorize"><img src="https://img.shields.io/npm/v/@darshanpro123/log-colorize.svg" alt="npm version" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/@darshanpro123/log-colorize.svg" alt="license" /></a>
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" alt="zero dependencies" />
   <img src="https://img.shields.io/badge/TypeScript-Ready-blue.svg" alt="TypeScript" />
 </p>
@@ -33,15 +33,15 @@
 ## 📦 Installation
 
 ```bash
-npm install log-colorize
+npm install @darshanpro123/log-colorize
 ```
 
 or with yarn / pnpm / bun:
 
 ```bash
-yarn add log-colorize
-pnpm add log-colorize
-bun add log-colorize
+yarn add @darshanpro123/log-colorize
+pnpm add @darshanpro123/log-colorize
+bun add @darshanpro123/log-colorize
 ```
 
 ---
@@ -49,7 +49,7 @@ bun add log-colorize
 ## 🚀 Quick Start
 
 ```typescript
-import { log } from "log-colorize";
+import { log } from "@darshanpro123/log-colorize";
 
 // Log with different severities (default is "info")
 log("User registered successfully", "success");  // ✔ SUCCESS  src/auth.ts:14:1  User registered successfully
@@ -62,7 +62,7 @@ log("Starting background worker");               // ℹ INFO     src/index.ts:5:
 ### CommonJS (Node.js)
 
 ```javascript
-const { log } = require("log-colorize");
+const { log } = require("@darshanpro123/log-colorize");
 
 log("Server started", "success");
 ```
@@ -95,7 +95,7 @@ try {
 Call `configure()` once at the entry point of your app to customize logging behavior:
 
 ```typescript
-import { configure } from "log-colorize";
+import { configure } from "@darshanpro123/log-colorize";
 
 configure({
   showPath: false,      // Hide caller file path (useful in production)
@@ -121,7 +121,7 @@ configure({
 
 ```tsx
 import React from "react";
-import { log } from "log-colorize";
+import { log } from "@darshanpro123/log-colorize";
 
 export function SaveButton() {
   const handleSave = async () => {
@@ -141,7 +141,7 @@ export function SaveButton() {
 
 ```tsx
 // Server Component / API Route (Node.js ANSI Terminal)
-import { log } from "log-colorize";
+import { log } from "@darshanpro123/log-colorize";
 
 export async function GET() {
   log("Fetching user profile", "info");
@@ -152,7 +152,7 @@ export async function GET() {
 ```tsx
 // Client Component (Browser %c CSS DevTools)
 "use client";
-import { log } from "log-colorize";
+import { log } from "@darshanpro123/log-colorize";
 import { useEffect } from "react";
 
 export default function UserProfile() {
