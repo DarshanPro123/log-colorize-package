@@ -169,8 +169,8 @@ const _bundlePath = getBundlePath();
 const _skipPatterns = [
   /getBundlePath/,
   /getCallerInfo/,
-  /\blog\b.*log-colorize/,
-  /log-colorize[/\\]src[/\\]index/,
+  /\blog\b.*(colory-logger|log-colorize)/,
+  /(colory-logger|log-colorize)[/\\]src[/\\]index/,
 ];
 
 /**

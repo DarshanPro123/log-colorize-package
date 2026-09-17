@@ -3,46 +3,43 @@ import styles from "./UsageExamples.module.css";
 const SNIPPETS = [
   {
     title: "Basic usage — log(message, type)",
-    code: `import { log } from "log-colorize";
+    code: `import { log } from "colory-logger";
 
 log("User created", "success");        // ✔ green
 log("DB connection lost", "error");    // ✖ red
-log("Rate limit at 90%", "warning");   // ⚠ yellow
-log("Server started :3000", "info");   // ℹ blue
-log("Default is info");                // ℹ (type optional)`,
+log("Rate limit at 80%", "warning");   // ⚠ yellow
+log("Server started on 3000", "info");  // ℹ blue
+log("Processing payment...");          // ℹ defaults to info`,
   },
   {
-    title: "Error object support",
-    code: `import { log } from "log-colorize";
+    title: "Passing Error Objects",
+    code: `import { log } from "colory-logger";
 
-// Pass an Error instance directly — message + stack prints
 try {
-  await db.connect();
+  throw new Error("ECONNREFUSED 127.0.0.1:5432");
 } catch (err) {
-  log(err, "error");
-  // ✖ ERROR  src/db.ts:8:5
-  //   Error: ECONNREFUSED 127.0.0.1:5432
-  //     at connect (src/db.ts:8:5)
-  //     at ...
+  log(err, "error");   // ✖ prints error.message + full stack trace!
 }`,
   },
   {
-    title: "configure() — global options",
-    code: `import { configure } from "log-colorize";
+    title: "Global Configuration",
+    code: `import { configure } from "colory-logger";
 
-// Hide paths in production
+// Hide file path prefix everywhere (useful in production)
+configure({ showPath: false });
+
+// Mute lower-severity logs globally
+configure({ level: "warning" }); // only warning + error will print!`,
+  },
+  {
+    title: "Next.js & React Integration",
+    code: `// Works in both Next.js Server Components (ANSI) & Client Components (%c CSS)
+import { log, configure } from "colory-logger";
+
 if (process.env.NODE_ENV === "production") {
   configure({ showPath: false });
 }
 
-// Only print warnings + errors (mute info + success)
-configure({ level: "warning" });
-
-// Plain text — no colors (for CI pipelines)
-configure({ colorsEnabled: false });`,
-  },
-  {
-    title: "Level filter — mute noisy logs",
     code: `import { log, configure } from "log-colorize";
 
 // In staging: only see warnings and errors

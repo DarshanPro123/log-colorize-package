@@ -1,4 +1,4 @@
-import { log, configure } from "log-colorize";
+import { log, configure } from "colory-logger";
 import type { LogEntry, LogType } from "../types";
 import styles from "./LogButtons.module.css";
 

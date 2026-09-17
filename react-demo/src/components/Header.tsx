@@ -24,7 +24,7 @@ export default function Header() {
 
       <div className={styles.install}>
         <span className={styles.installLabel}>Install:</span>
-        <code className={styles.installCode}>npm install log-colorize</code>
+        <code className={styles.installCode}>npm install colory-logger</code>
       </div>
     </header>
   );

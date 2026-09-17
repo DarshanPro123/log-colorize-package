@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import { configure } from "log-colorize";
+import { configure } from "colory-logger";
 
 // Hide file paths in production — show them in development
 if (import.meta.env.PROD) {
