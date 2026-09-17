@@ -1,0 +1,47 @@
+/* ── Google Fonts ────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+/* ── Reset & tokens ─────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #080a12;
+  --surface: #0f1120;
+  --card:    #141828;
+  --border:  #1c2038;
+  --muted:   #303554;
+  --text:    #e2e4f0;
+  --sub:     #6b7194;
+
+  --green:  #22c55e;
+  --red:    #ef4444;
+  --yellow: #f59e0b;
+  --blue:   #3b82f6;
+  --gray:   #94a3b8;
+  --purple: #a78bfa;
+  --indigo: #6366f1;
+
+  --g-green:  rgba(34,197,94,.1);
+  --g-red:    rgba(239,68,68,.1);
+  --g-yellow: rgba(245,158,11,.1);
+  --g-blue:   rgba(59,130,246,.1);
+  --g-gray:   rgba(148,163,184,.08);
+  --g-purple: rgba(167,139,250,.1);
+
+  --r: 14px;
+  --rs: 8px;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; }
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }

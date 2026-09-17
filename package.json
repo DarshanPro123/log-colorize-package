@@ -1,0 +1,65 @@
+{
+  "name": "log-colorize",
+  "version": "1.0.0",
+  "description": "Cross-environment colored console logging for Node.js terminal and browser (Chrome DevTools). Works seamlessly with React and Next.js.",
+  "keywords": [
+    "logger",
+    "logging",
+    "console",
+    "colors",
+    "colorize",
+    "ansi",
+    "terminal",
+    "browser",
+    "nextjs",
+    "react",
+    "typescript",
+    "devtools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/log-colorize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/log-colorize/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/log-colorize#readme",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.mts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "postbuild": "node -e \"const fs = require('fs'); if (fs.existsSync('dist/types/index.d.mts')) fs.copyFileSync('dist/types/index.d.mts', 'dist/types/index.d.ts');\"",
+    "build:check": "tsc --noEmit",
+    "dev": "tsup --watch",
+    "test": "node --loader ts-node/esm test/test.ts",
+    "test:js": "node test/test.js",
+    "prepublishOnly": "npm run build && npm run build:check",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.3",
+    "rimraf": "^5.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}
