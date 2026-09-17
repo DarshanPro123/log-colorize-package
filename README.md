@@ -184,52 +184,6 @@ npm run dev
 
 ---
 
-## 📤 Step-by-Step Guide: Pushing to GitHub & NPM
-
-### Step 1: Git & GitHub Setup
-
-1. Initialize git and commit files:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: complete log-colorize package implementation"
-   ```
-
-2. Link your GitHub repository and push:
-   ```bash
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/log-colorize.git
-   git push -u origin main
-   ```
-
----
-
-### Step 2: Publish to NPM
-
-1. **Update `package.json`** with your information:
-   Ensure `author`, `repository.url`, `bugs.url`, and `homepage` in `package.json` match your GitHub/NPM username.
-
-2. **Login to NPM**:
-   ```bash
-   npm login
-   ```
-
-3. **Publish the package**:
-   ```bash
-   npm publish --access public
-   ```
-
-4. **Future Version Bumps**:
-   ```bash
-   npm version patch   # 1.0.0 -> 1.0.1 (bug fix)
-   npm version minor   # 1.0.0 -> 1.1.0 (new feature)
-   npm version major   # 1.0.0 -> 2.0.0 (breaking change)
-
-   npm publish --access public
-   ```
-
----
-
 ## 📄 License
 
 [MIT](./LICENSE)
