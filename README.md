@@ -1,7 +1,7 @@
-# @crush-candy/log-colorize
+# colory-logger
 
 <p align="center">
-  <img src="./docs/banner.png" alt="log-colorize banner" width="100%" />
+  <img src="./docs/banner.png" alt="colory-logger banner" width="100%" />
 </p>
 
 <p align="center">
@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@crush-candy/log-colorize"><img src="https://img.shields.io/npm/v/@crush-candy/log-colorize.svg" alt="npm version" /></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/@crush-candy/log-colorize.svg" alt="license" /></a>
+  <a href="https://www.npmjs.com/package/colory-logger"><img src="https://img.shields.io/npm/v/colory-logger.svg" alt="npm version" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/colory-logger.svg" alt="license" /></a>
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" alt="zero dependencies" />
   <img src="https://img.shields.io/badge/TypeScript-Ready-blue.svg" alt="TypeScript" />
 </p>
@@ -33,15 +33,15 @@
 ## 📦 Installation
 
 ```bash
-npm install @crush-candy/log-colorize
+npm install colory-logger
 ```
 
 or with yarn / pnpm / bun:
 
 ```bash
-yarn add @crush-candy/log-colorize
-pnpm add @crush-candy/log-colorize
-bun add @crush-candy/log-colorize
+yarn add colory-logger
+pnpm add colory-logger
+bun add colory-logger
 ```
 
 ---
@@ -49,7 +49,7 @@ bun add @crush-candy/log-colorize
 ## 🚀 Quick Start
 
 ```typescript
-import { log } from "@crush-candy/log-colorize";
+import { log } from "colory-logger";
 
 // Log with different severities (default is "info")
 log("User registered successfully", "success");  // ✔ SUCCESS  src/auth.ts:14:1  User registered successfully
@@ -62,7 +62,7 @@ log("Starting background worker");               // ℹ INFO     src/index.ts:5:
 ### CommonJS (Node.js)
 
 ```javascript
-const { log } = require("@darshanpro123/log-colorize");
+const { log } = require("colory-logger");
 
 log("Server started", "success");
 ```
@@ -95,7 +95,7 @@ try {
 Call `configure()` once at the entry point of your app to customize logging behavior:
 
 ```typescript
-import { configure } from "@darshanpro123/log-colorize";
+import { configure } from "colory-logger";
 
 configure({
   showPath: false,      // Hide caller file path (useful in production)
@@ -121,7 +121,7 @@ configure({
 
 ```tsx
 import React from "react";
-import { log } from "@darshanpro123/log-colorize";
+import { log } from "colory-logger";
 
 export function SaveButton() {
   const handleSave = async () => {
@@ -141,7 +141,7 @@ export function SaveButton() {
 
 ```tsx
 // Server Component / API Route (Node.js ANSI Terminal)
-import { log } from "@darshanpro123/log-colorize";
+import { log } from "colory-logger";
 
 export async function GET() {
   log("Fetching user profile", "info");
@@ -152,7 +152,7 @@ export async function GET() {
 ```tsx
 // Client Component (Browser %c CSS DevTools)
 "use client";
-import { log } from "@darshanpro123/log-colorize";
+import { log } from "colory-logger";
 import { useEffect } from "react";
 
 export default function UserProfile() {
