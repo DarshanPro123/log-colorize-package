@@ -1,4 +1,4 @@
-# @darshanpro123/log-colorize
+# @crush-candy/log-colorize
 
 <p align="center">
   <img src="./docs/banner.png" alt="log-colorize banner" width="100%" />
@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@darshanpro123/log-colorize"><img src="https://img.shields.io/npm/v/@darshanpro123/log-colorize.svg" alt="npm version" /></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/@darshanpro123/log-colorize.svg" alt="license" /></a>
+  <a href="https://www.npmjs.com/package/@crush-candy/log-colorize"><img src="https://img.shields.io/npm/v/@crush-candy/log-colorize.svg" alt="npm version" /></a>
+  <a href="./LICENSE"><img src="https://img.shields.io/npm/l/@crush-candy/log-colorize.svg" alt="license" /></a>
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" alt="zero dependencies" />
   <img src="https://img.shields.io/badge/TypeScript-Ready-blue.svg" alt="TypeScript" />
 </p>
@@ -33,15 +33,15 @@
 ## 📦 Installation
 
 ```bash
-npm install @darshanpro123/log-colorize
+npm install @crush-candy/log-colorize
 ```
 
 or with yarn / pnpm / bun:
 
 ```bash
-yarn add @darshanpro123/log-colorize
-pnpm add @darshanpro123/log-colorize
-bun add @darshanpro123/log-colorize
+yarn add @crush-candy/log-colorize
+pnpm add @crush-candy/log-colorize
+bun add @crush-candy/log-colorize
 ```
 
 ---
@@ -49,7 +49,7 @@ bun add @darshanpro123/log-colorize
 ## 🚀 Quick Start
 
 ```typescript
-import { log } from "@darshanpro123/log-colorize";
+import { log } from "@crush-candy/log-colorize";
 
 // Log with different severities (default is "info")
 log("User registered successfully", "success");  // ✔ SUCCESS  src/auth.ts:14:1  User registered successfully

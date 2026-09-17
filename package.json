@@ -1,5 +1,5 @@
 {
-  "name": "@darshanpro123/log-colorize",
+  "name": "@crush-candy/log-colorize",
   "version": "1.0.0",
   "description": "Cross-environment colored console logging for Node.js terminal and browser (Chrome DevTools). Works seamlessly with React and Next.js.",
   "keywords": [
